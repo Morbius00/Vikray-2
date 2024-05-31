@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "../common/Button/button";
 import Navlogo from "../navbar/nav_assets/vikray-logo.svg";
 import Profilepic from "@/components/navbar/nav_assets/profilePic.png";
@@ -78,16 +79,16 @@ const Navbar = () => {
           >
             <div className="items-center justify-center  space-y-8 md:flex md:space-x-[4vw] md:space-y-0 ">
               <div className="text-white font-medium hover:text-[#FFFF6D]">
-                <a href="javascript:void(0)">Explore</a>
+                <Link href="/">Explore</Link>
               </div>
               <div className="text-white font-medium hover:text-[#FFFF6D]">
-                <a href="javascript:void(0)">Store</a>
+                <Link href="/store">Store</Link>
               </div>
               <div className="text-white font-medium hover:text-[#FFFF6D]">
-                <a href="javascript:void(0)">About us</a>
+                <Link href="javascript:void(0)">About us</Link>
               </div>
               <div className="text-white font-medium hover:text-[#FFFF6D]">
-                <a href="javascript:void(0)">Wishlist</a>
+                <Link href="javascript:void(0)">Wishlist</Link>
               </div>
             </div>
           </div>
@@ -117,7 +118,7 @@ const Navbar = () => {
             </div>
           ) : (
             <div className="space-x-2">
-              <Button onClick={() => setIsLogedIn(true)} className="text-white ">
+              <Button onClick={() => setIsLogedIn(true)} className="text-white border border-[#FFFF6D]">
                 LogIn
               </Button>
               <Button filled>Signup</Button>
