@@ -4,7 +4,7 @@ import Button from "../common/Button/button";
 const footer = () => {
   return (
     <footer className=" bg-black ">
-      <div className="flex md:flex-row flex-col md:space-x-[4vw] py-16">
+      <div className="flex md:flex-row flex-col md:space-x-[4vw] py-16 lg:mx-20">
         <div className="lg:mt-16 lg:text-center text-5xl font-bold  lg:ml-16 ml-7 ">
           A step <span className="text-[#FFFF6D]">forward</span> towards{" "}
           <span className="text-[#FFFF6D]">web3</span>

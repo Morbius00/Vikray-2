@@ -17,9 +17,9 @@ export function BentoGridSecondDemo() {
         <div className="flex justify-center items-center my-6 ">
           <div className=" text-white font-medium text-4xl">
             <span className="text-[#FFFF6D] text-4xl font-medium mr-3">
-              TOP
+              DEAL
             </span>
-            PICKS FOR YOU
+            OF THE DAY
             <div className="w-auto h-1 bg-gradient-to-r from-[#1F1F1F] via-[#FFFF6D] to-[#1F1F1F] placeholder-opacity-950 mt-3"></div>
           </div>
          
