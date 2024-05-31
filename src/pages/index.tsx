@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '@/components/common/button'
+import Button from '@/components/common/Button/button'
 import Navbar from '@/components/navbar/navbar'
 import React from 'react'
 import Image from "next/image";
@@ -14,7 +14,7 @@ const landing = () => {
   return (
     <div className="bg-[url('/bg-image.png')] bg-[#212121] text-white h-full overflow-hidden ">
       <Navbar />
-      <div className="flex md:space-x-20 md:flex-row flex-col  lg:mx-28 lg:my-20 mx-7 my-5">
+      <div className="flex md:space-x-16 md:flex-row flex-col lg:mx-28 lg:my-20 mx-7 my-5">
         <div>
           <div className="lg:text-[2.2vw] md:text-[29px] text-[5vw] ">
             Introducing the
@@ -41,8 +41,8 @@ const landing = () => {
           </div>
         </div>
        
-        <div className="flex flex-col mt-5 ">
-          <div className="lg:w-[50vw] md:w-[40vw] flex flex-col lg:flex-row w-auto">
+        <div className="flex justify-center items-center flex-col mt-5 ">
+          <div className="lg:w-[50vw] md:w-[45vw] flex flex-col lg:flex-row w-auto">
             <Image src={HeroImage} alt="Picture of the author" />
           </div>
           <div className="mt-6 text-[7vw] lg:text-[3vw] md:text-[2vw] ml-9 text-[#FFFF6D]">

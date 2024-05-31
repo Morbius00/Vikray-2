@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import Button from "../common/button";
+import Button from "../common/Button/button";
 import Navlogo from "../navbar/nav_assets/vikray-logo.svg";
 import Profilepic from "@/components/navbar/nav_assets/profilePic.png";
 

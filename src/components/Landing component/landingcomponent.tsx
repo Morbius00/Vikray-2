@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Image from "next/image";
-import Button from '@/components/common/button'
+import Button from '@/components/common/Button/button'
 import {ComponentImage, Feat1, Feat2, Feat3, Heroimage2} from '../../assets/landingAssets/index'
 
 
