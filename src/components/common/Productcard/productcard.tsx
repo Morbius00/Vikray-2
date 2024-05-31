@@ -18,7 +18,7 @@ export const ThreeDCardDemo = ({
 }): JSX.Element => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className=" bg-gray-800  relative group/card  dark:hover:shadow-2xl dark:hover:shadow-[#F8F872]/[0.4] dark:bg-[#232323] dark:border-white/[0.2] border-black/[0.1] w-auto  h-auto rounded-xl p-6 border  ">
+      <CardBody className=" bg-gray-800 relative group/card dark:hover:shadow-2xl dark:hover:shadow-[#F8F872]/[0.4] dark:bg-[#232323] dark:border-white/[0.2] border-black/[0.1] w-[350px] lg:w-auto h-auto rounded-xl p-6 border  ">
         <CardItem
           translateZ="50"
           className="text-2xl font-bold text-neutral-600 dark:text-white"
@@ -45,7 +45,7 @@ export const ThreeDCardDemo = ({
             src={image}
             height="1000"
             width="1000"
-            className="h-60 w-auto mx-auto object-cover rounded-xl group-hover/card:shadow-sm"
+            className="md:h-[285px] h-auto  w-80 mx-auto object-cover rounded-xl group-hover/card:shadow-sm"
             alt="thumbnail"
           />
         </CardItem>
@@ -58,20 +58,20 @@ export const ThreeDCardDemo = ({
             {""}
           </CardItem>
         </div>
-        <div className="flex space-x-10 items-center mt-16 ">
+        <div className="flex gap-6 justify-center items-center mt-16 ">
           <CardItem
             translateZ={20}
             as={Link}
             href="https://twitter.com/mannupaaji"
             target="__blank"
-            className="px-4 py-2 rounded-xl text-md border border-[#ffff6db1] font-normal dark:text-white"
+            className="px-4 py-2 rounded-md text-sm md:text-md border border-[#ffff6db1] font-normal dark:text-white"
           >
             Try now →
           </CardItem>
           <CardItem
             translateZ={20}
             as="button"
-            className=" rounded-2xl px-[2vw] py-[1vh] bg-[#F8F872] text-black hover:bg-[#ffff6db1] group-hover/card:shadow-sm text-md font-bold"
+            className=" rounded-md py-2 px-4 bg-[#F8F872] text-black hover:bg-[#ffff6db1] group-hover/card:shadow-sm text-md font-bold"
           >
             Buy Now
           </CardItem>

@@ -1,6 +1,5 @@
 import React from "react";
 import { Bag, BagNikon, Jack, Shoe } from "@/assets/shopassets";
-import ItemCard from "./ItemCard";
 import Productcard from "../common/Productcard/productcard";
 
 const TopPicksForYou = () => {
@@ -38,7 +37,7 @@ const TopPicksForYou = () => {
   ];
 
   return (
-    <div className="flex flex-col mx-[10vw]">
+    <div className="flex flex-col items-center justify-center">
       <div className="flex justify-center items-center mt-10 ">
         <div className=" text-white font-medium text-4xl mt-10">
           <span className="text-[#FFFF6D] text-4xl font-medium mr-3">TOP</span>
@@ -47,8 +46,8 @@ const TopPicksForYou = () => {
         </div>
       </div>
 
-      <div className="flex overflow-x-auto ">
-        <div className="container11 pb-4 flex lg:flex-row flex-col space-x-9 mx-auto">
+      <div className="flex overflow-x-auto mb-9  ">
+        <div className="container11 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-3 ">
           {data.map((item) => {
             return (
               <Productcard
