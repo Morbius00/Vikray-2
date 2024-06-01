@@ -31,7 +31,7 @@ const landing = () => {
             </div>
             <div className=" flex flex-row  space-x-9 my-12">
               <Link href="/store">
-                <Button filled className="text-base">
+                <Button filled className="text-lg">
                   {" "}
                   Explore Shop
                 </Button>
