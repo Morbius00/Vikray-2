@@ -47,7 +47,7 @@ const TopPicksForYou = () => {
       </div>
 
       <div className="flex overflow-x-auto mb-9  ">
-        <div className="container11 grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 gap-3 ">
+        <div className="container11 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 gap-auto md:gap-6 ">
           {data.map((item) => {
             return (
               <Productcard
