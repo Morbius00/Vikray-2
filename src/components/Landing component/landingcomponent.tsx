@@ -1,11 +1,16 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 import Image from "next/image";
-import Button from '@/components/common/Button/button'
-import {ComponentImage, Feat1, Feat2, Feat3, Heroimage2} from '../../assets/landingAssets/index'
-
-
+import Button from "@/components/common/Button/button";
+import {
+  ComponentImage,
+  Feat1,
+  Feat2,
+  Feat3,
+  Heroimage2,
+} from "../../assets/landingAssets/index";
+import Link from "next/link";
 
 const landingcomponent = () => {
   return (
@@ -22,9 +27,8 @@ const landingcomponent = () => {
           <Image src={ComponentImage} alt="Picture of component" />
         </div>
       </div>
-      <div className='w-full h-[1px] bg-[#F8F872] md:mb-16 mb-8 '></div>
+      <div className="w-full h-[1px] bg-[#F8F872] md:mb-16 mb-8 "></div>
 
-      
       <div className="flex md:flex-row flex-col md:space-x-9 m-5">
         <div className="flex justify-center items-center my-3">
           <Image
@@ -58,12 +62,13 @@ const landingcomponent = () => {
         </div>
       </div>
 
-
       <div className="md:flex flex-row md:space-x-20 m-[7vw]">
         <div className="mt-20">
           <div className="flex  space-x-2">
             <div className="flex items-center justify-center bg-[#FFFF6D] w-1 lg:h-[5vh] md:h-7 "></div>
-            <div className="lg:text-[2.2vw] md:text-[29px] text-[5vw]">YOUR WAY TOWARDS METAVERSE</div>
+            <div className="lg:text-[2.2vw] md:text-[29px] text-[5vw]">
+              YOUR WAY TOWARDS METAVERSE
+            </div>
           </div>
           <div className="mt-9 lg:text-[1.1vw] md:text-[1.2vw] ">
             Experience the intersection of cutting-edge technology, style and
@@ -77,11 +82,16 @@ const landingcomponent = () => {
             shipping options to make an impact on future generations through
             conscious purchasing habits. Join the revolution now!
           </div>
-          <div className='mt-9'>
-            <Button filled>Web3 Shooping</Button>
+          <div className="mt-9">
+            <Link href="/store">
+              <Button filled className="text-base">
+                {" "}
+                Web3 Shop
+              </Button>
+            </Link>
           </div>
         </div>
-        <div className='flex justify-center items-center'>
+        <div className="flex justify-center items-center">
           <Image
             className="lg:w-[5024px] md:w-[6024px] "
             src={Heroimage2}
@@ -91,6 +101,6 @@ const landingcomponent = () => {
       </div>
     </>
   );
-}
+};
 
-export default landingcomponent
+export default landingcomponent;

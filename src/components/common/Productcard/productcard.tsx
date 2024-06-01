@@ -58,7 +58,7 @@ export const ThreeDCardDemo = ({
             {""}
           </CardItem>
         </div>
-        <div className="flex md:flex-row flex-col md:gap-6 gap-3 justify-center items-center md:mt-8 mt-4 ">
+        <div className="flex md:flex-row flex-col md:gap-16 gap-3 justify-center items-center md:mt-8 mt-4 ">
           <CardItem
             translateZ={20}
             as={Link}

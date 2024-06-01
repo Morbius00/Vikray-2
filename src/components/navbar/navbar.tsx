@@ -117,7 +117,7 @@ const Navbar = () => {
               </button>
             </div>
           ) : (
-            <div className="space-x-2">
+            <div className="space-x-4">
               <Button onClick={() => setIsLogedIn(true)} className="text-white border border-[#FFFF6D]">
                 LogIn
               </Button>

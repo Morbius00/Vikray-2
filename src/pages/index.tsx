@@ -1,14 +1,13 @@
-'use client'
+"use client";
 
-import Button from '@/components/common/Button/button'
-import Navbar from '@/components/navbar/navbar'
-import React from 'react'
+import Button from "@/components/common/Button/button";
+import Navbar from "@/components/navbar/navbar";
+import React from "react";
 import Image from "next/image";
-import {HeroImage} from '../assets/landingAssets/index'
-import HomeComp from '../components/Landing component/landingcomponent'
-import Footer from '@/components/footer/footer'
-
-
+import { HeroImage } from "../assets/landingAssets/index";
+import HomeComp from "../components/Landing component/landingcomponent";
+import Footer from "@/components/footer/footer";
+import Link from "next/link";
 
 const landing = () => {
   return (
@@ -31,16 +30,20 @@ const landing = () => {
               revolution of sustainable fashion.
             </div>
             <div className=" flex flex-row  space-x-9 my-12">
-              <Button filled className="text-base">
-                Explore Shop
-              </Button>
+              <Link href="/store">
+                <Button filled className="text-base">
+                  {" "}
+                  Explore Shop
+                </Button>
+              </Link>
+
               <Button className="text-white text-lg border-2 border-[#FFFF6D]">
                 Know more
               </Button>
             </div>
           </div>
         </div>
-       
+
         <div className="flex justify-center items-center flex-col mt-5 ">
           <div className="lg:w-[50vw] md:w-[45vw] flex flex-col lg:flex-row w-auto">
             <Image src={HeroImage} alt="Picture of the author" />
@@ -50,18 +53,18 @@ const landing = () => {
           </div>
         </div>
       </div>
-      
-      <div className='mt-16'>
+
+      <div className="mt-16">
         <div className="bg-[#FFFF6D] h-1 w-full "></div>
         <div className="text-center text-[7vw] font-bold text-[#FFFF6D] md:justify-evenly">
           METAVERSE SHOPPING
         </div>
         <div className="bg-[#FFFF6D] h-1 w-full"></div>
       </div>
-      <HomeComp/>
-      <Footer/>
+      <HomeComp />
+      <Footer />
     </div>
   );
-}
+};
 
-export default landing
+export default landing;

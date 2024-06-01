@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../common/Button/button";
+import Link from "next/link";
 
 const footer = () => {
   return (
@@ -26,9 +27,12 @@ const footer = () => {
           <div className="text-xl font-bold text-white pb-9 ml-7 mt-3">
             Excited for your new shopping journey?{" "}
           </div>
-          <Button filled className="text-lg ml-7">
-            Let Shop
-          </Button>
+          <Link href="/store">
+              <Button filled className="text-base">
+                {" "}
+                Lets Shop
+              </Button>
+            </Link>
         </div>
       </div>
       <div className="text-center py-5 text-xl">Made By Morbius</div>
