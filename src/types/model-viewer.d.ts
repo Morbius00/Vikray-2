@@ -1,16 +1,12 @@
-declare module '@google/model-viewer' {
-    interface ModelViewerProps {
-      style: React.CSSProperties;
-      alt: string;
-      src: string;
-      ar: boolean;
-      arModes: string;
-      arPlacement: string;
-      cameraControls: boolean;
-      poster: string;
-      shadowIntensity: number;
-      autoRotate: boolean;
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "model-viewer": React.DetailedHTMLProps<
+        React.AllHTMLAttributes<
+          Partial<globalThis.HTMLElementTagNameMap['model-viewer']>
+        >,
+        Partial<globalThis.HTMLElementTagNameMap['model-viewer']>
+      >;
     }
-  
-    class ModelViewer extends React.Component<ModelViewerProps, {}> {}
   }
+}
