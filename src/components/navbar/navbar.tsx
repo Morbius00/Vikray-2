@@ -88,7 +88,7 @@ const Navbar = () => {
                 <Link href="javascript:void(0)">About us</Link>
               </div>
               <div className="text-white font-medium hover:text-[#FFFF6D]">
-                <Link href="javascript:void(0)">Wishlist</Link>
+                <Link href="/product">Wishlist</Link>
               </div>
             </div>
           </div>

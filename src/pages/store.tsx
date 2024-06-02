@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { Helmet } from "react-helmet";
 import Navbar from "@/components/navbar/navbar";

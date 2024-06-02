@@ -1,8 +1,8 @@
 import React from 'react'
-import { WishlistIcon } from './assets'
-import "./style/ArModelViewer.css"
 
-const ArBackBtn = ({name,company,price}: {name: string, company: string, price: number}) => {
+import "./style/ArModelViewer.module.css"
+
+const ArBackBtn = ({name,company,price}: {name: string, company: string, price: string}) => {
     return (
         <button slot="exit-webxr-ar-button" className="mt-[5vh] ml-[2vh]" >
             <div className='w-[40px] h-[40px] flex justify-center items-center border-[3px] border-white rounded-full'>
@@ -28,7 +28,7 @@ const ArBackBtn = ({name,company,price}: {name: string, company: string, price: 
                     </div>
 
                     <button className='flex items-center backdrop-blur-lg p-3 border rounded-2xl w-[60px] h-[60px]'>
-                        <WishlistIcon/>
+                        
                     </button>
 
                 </div>
