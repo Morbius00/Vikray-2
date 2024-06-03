@@ -16,8 +16,9 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/**/*.tsx", "src/types/model-viewer.d.ts" ], // Add the correct path to the "include" section
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/**/*.tsx", "src/types/model-viewer.d.ts", "src/types/type.ts" ], // Add the correct path to the "include" section
   "exclude": ["node_modules"]
 }
