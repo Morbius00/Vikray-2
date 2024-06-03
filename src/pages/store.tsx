@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Navbar from "@/components/navbar/navbar";
 import Footer from "@/components/footer/footer";
 import { TopPicksForYou } from "@/components/shop component";
@@ -16,9 +16,11 @@ import {
 const Shop = () => {
   return (
     <div className="bg-[url('/bg-image.png')] bg-[#212121] text-white h-full overflow-hidden">
+      <HelmetProvider>
       <Helmet>
         <title>Shop | Vikray | Metaverse Shopping</title>
       </Helmet>
+      
       <Navbar />
       <ContainerScroll titleComponent="Welcome to the MetaVerse Shoping world">
         <Header />
@@ -26,6 +28,7 @@ const Shop = () => {
       <DealDay />
       <TopPicksForYou />
       <Footer />
+      </HelmetProvider>
     </div>
   );
 };

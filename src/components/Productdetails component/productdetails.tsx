@@ -1,9 +1,8 @@
 'use client'
 import React from "react";
-import ArModelViewer from "@/components/common/webxr/ArModelViewer";
+import ArModelViewerDynamic from "@/components/common/webxr/ArModelViewerDynamic";
 import {nike_air_zoom_pegasus_36} from "../../assets/3dassets/index"; // Import the 3D model
 import Button from "../common/Button/button";
-
 
 const ProductBody = () => {
   const data = [
@@ -12,24 +11,20 @@ const ProductBody = () => {
       name: "Neo Jacket",
       company: "CryptoPunk",
       price: "$1250",
-      poster:
-        "",
+      poster: "",
       model: nike_air_zoom_pegasus_36,
       placement: "floor",
       hotspots: [
         {
           id: 1,
           name: "Button closure",
-          position:
-            "0.07188187187656739m 1.4514574166323728m 0.08786709958031445m",
-          normal:
-            "-0.021876867398458802m 0.3620999834986919m 0.9318825058037508m",
+          position: "0.07188187187656739m 1.4514574166323728m 0.08786709958031445m",
+          normal: "-0.021876867398458802m 0.3620999834986919m 0.9318825058037508m",
         },
         {
           id: 2,
           name: "Leather material",
-          position:
-            "-0.14273273485683724m 1.193229129751948m 0.0749232170042912m",
+          position: "-0.14273273485683724m 1.193229129751948m 0.0749232170042912m",
           normal: "-0.6750052890684157m 0.165322875775553m 0.7190522974547578m",
         },
       ],
@@ -42,10 +37,10 @@ const ProductBody = () => {
       <div className="md:flex p-10 justify-center text-white">
         <div className="md:items-center flex justify-center md:mr-[5vw]">
           {/* AR Model Viewer */}
-          <ArModelViewer
+          <ArModelViewerDynamic
             name={data[0].name}
             company={data[0].company}
-            hotspots={data[0].hotspots}
+            hotspots={data[0].hotspots.map(hotspot => ({...hotspot, id: hotspot.id.toString()}))}
             price={data[0].price}
             poster={data[0].poster}
             model={data[0].model}
