@@ -4,6 +4,8 @@ import {
   nike_air_zoom_pegasus_36,
   cyberpunk_jacket,
   old_camera_bag_,
+  versace_bag,
+  rock_jacket
 } from "@/assets/3dassets/index";
 import "./style/ArModelViewer.module.css";
 import ArView from "./ViewArSpace";
@@ -40,11 +42,12 @@ const ArModelViewer: React.FC<ArModelViewerProps> = ({
     <div className="flex flex-col items-center justify-center bg-[#191919] w-[60vw] md:w-[600px] h-[60vh] rounded-3xl">
       <model-viewer
         style={{ width: "100%", height: "60vh", display: "flex" }}
-        src={old_camera_bag_}
+        src={model}
         alt={`A 3D model of an ${name} by ${company}`}
         ios-src=""
+        price={price}
         poster={poster}
-        shadow-intensity="1"
+        shadow-intensity="2"
         camera-controls
         auto-rotate
         ar

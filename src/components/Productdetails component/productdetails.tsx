@@ -1,18 +1,18 @@
 'use client'
 import React from "react";
 import ArModelViewerDynamic from "@/components/common/webxr/ArModelViewerDynamic";
-import {nike_air_zoom_pegasus_36} from "../../assets/3dassets/index"; // Import the 3D model
+import {rock_jacket} from "../../assets/3dassets/index"; // Import the 3D model
 import Button from "../common/Button/button";
 
 const ProductBody = () => {
   const data = [
     {
       id: 1,
-      name: "Neo Jacket",
-      company: "CryptoPunk",
+      name: "Rock Jacket",
+      company: "CrypoRock",
       price: "$1250",
       poster: "",
-      model: nike_air_zoom_pegasus_36,
+      model: rock_jacket,
       placement: "floor",
       hotspots: [
         {
@@ -75,8 +75,8 @@ const ProductBody = () => {
               <div className="border border-white h-0 w-[5vw]"></div>
             </div>
             <div>
-              Material: Cotton <br />
-              Machine Wash
+              Material: Vegan Leather <br />
+              Dry Wash
             </div>
           </div>
 
