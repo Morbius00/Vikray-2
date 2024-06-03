@@ -14,7 +14,7 @@ export function BentoGridSecondDemo() {
   return (
     <div>
       <div>
-        <div className="flex justify-center items-center my-6 ">
+        <div className="flex justify-center items-center mb-6 -mt-40 ">
           <div className=" text-white font-medium text-4xl">
             <span className="text-[#FFFF6D] text-4xl font-medium mr-3">
               DEAL
