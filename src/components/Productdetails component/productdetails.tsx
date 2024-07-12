@@ -4,6 +4,7 @@ import ArModelViewerDynamic from "@/components/common/webxr/ArModelViewerDynamic
 import { rock_jacket } from "../../assets/3dassets/index"; // Import the 3D model
 import Button from "../common/Button/button";
 import SizeChart from "../common/SizeChart/sizes";
+import { BagIcon, HeartIcon } from "@/assets/productAssets";
 
 const ProductBody = () => {
   const data = [
@@ -64,7 +65,6 @@ const ProductBody = () => {
               Wishlist
             </Button>
           </div>
-          
         </div>
         <div className="items-center flex justify-center lg:mr-24 md:mr-40 mt-14">
           {/* AR Model Viewer */}
@@ -80,7 +80,7 @@ const ProductBody = () => {
             model={data[0].model}
           />
         </div>
-        <div className="flex flex-col items-start justify-start ml-10 sm:ml-10 md:-mt-[22rem] lg:mt-0">
+        <div className="flex flex-col items-start justify-start ml-10 sm:ml-10 lg:-ml-5 md:-mt-[22rem] lg:mt-0">
           {/* Material & Care */}
           <div className="md:pt-[5rem] pt-10">
             <div className="flex items-center space-x-2 text-2xl">
@@ -95,7 +95,7 @@ const ProductBody = () => {
           </div>
 
           {/* Description */}
-          <div className="lg:pt-[5rem] pt-5">
+          <div className="lg:pt-[3rem] pt-5">
             <div className="flex items-center space-x-2 text-2xl">
               <div>Description</div>
 
@@ -106,13 +106,25 @@ const ProductBody = () => {
               closure, long sleeves, straight hem, and unlined lining
             </div>
           </div>
-          <div className="lg:pt-[5rem] pt-5">
-          
+          <div className="lg:pt-[3rem] pt-5">
+            <div className="mb-4">
+              <h2 className="sm:text-2xl text-xl font-bold">
+                Customer Reviews
+              </h2>
+              <div className="flex items-center">
+                <span className="text-yellow-500 sm:text-2xl text-xl mr-2">
+                  ★★★★★
+                </span>
+                <p className="text-gray-600">5 2345 reviews</p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:pt-[3rem] pt-5">
             <h2 className="flex text-xl">
               Product by{" "}
               <span className="text-[#FFFF6D] mx-1"> {data[0].company} </span>
             </h2>
-            </div>
+          </div>
         </div>
       </div>
     </div>

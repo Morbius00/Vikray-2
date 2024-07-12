@@ -6,7 +6,8 @@ const Button: FC<{
   className?: string;
   onClick?: () => void;
   disabled?: boolean;
-}> = ({ filled, children, className, onClick, disabled }) => {
+  Image?: any;
+}> = ({ filled, children, className, onClick, disabled, Image }) => {
   return (
       <button
           disabled={disabled}
