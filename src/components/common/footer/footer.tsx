@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../common/Button/button";
+import Button from "../Button/button";
 import Link from "next/link";
 
 const footer = () => {

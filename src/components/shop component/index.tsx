@@ -1,4 +1,4 @@
-import { BentoGridItem } from "../common/GridCard/GridCardLayout";
+import { BentoGridItem } from "../GridCard/GridCardLayout";
 import TopPicksForYou from "./TopPicksForYou";
 
 

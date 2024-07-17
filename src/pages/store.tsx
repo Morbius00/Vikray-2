@@ -2,8 +2,8 @@
 
 import React from "react";
 import { Helmet, HelmetProvider } from 'react-helmet-async'
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
+import Navbar from "@/components/common/navbar/navbar";
+import Footer from "@/components/common/footer/footer";
 import { TopPicksForYou } from "@/components/shop component";
 import  DealDay  from '@/components/shop component/DealOfTheDay';
 

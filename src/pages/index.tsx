@@ -1,12 +1,12 @@
 "use client";
 
 import Button from "@/components/common/Button/button";
-import Navbar from "@/components/navbar/navbar";
+import Navbar from "@/components/common/navbar/navbar";
 import React from "react";
 import Image from "next/image";
 import { HeroImage } from "../assets/landingAssets/index";
 import HomeComp from "../components/Landing component/landingcomponent";
-import Footer from "@/components/footer/footer";
+import Footer from "@/components/common/footer/footer";
 import Link from "next/link";
 
 const landing = () => {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "../common/Button/button";
+import Button from "../Button/button";
 import Navlogo from "../navbar/nav_assets/vikray-logo.svg";
-import Profilepic from "@/components/navbar/nav_assets/profilePic.png";
+import Profilepic from "@/components/common/navbar/nav_assets/profilePic.png";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <Link href="/store">Store</Link>
               </div>
               <div className="text-white font-medium hover:text-[#FFFF6D]">
-                <Link href="javascript:void(0)">About us</Link>
+                <Link href="/about">About</Link>
               </div>
               <div className="text-white font-medium hover:text-[#FFFF6D]">
                 <Link href="/product">Wishlist</Link>

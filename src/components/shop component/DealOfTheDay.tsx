@@ -2,7 +2,7 @@ import { cn } from "../../../utils/cn";
 import React from "react";
 import Image from "next/image";
 import { Brand1, Brand2, Brand3, Brand4 } from "@/assets/shopassets";
-import { BentoGrid, BentoGridItem } from "../common/GridCard/GridCardLayout";
+import { BentoGrid, BentoGridItem } from "../GridCard/GridCardLayout";
 import {
   IconClipboardCopy,
   IconFileBroken,
