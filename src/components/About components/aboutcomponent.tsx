@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { AboutHero2, AboutHero3 } from "@/assets/aboutAssets";
-// import Globe from "@/components/GlobeComponent/globe"
+import Globe from "@/components/GlobeComponent/globe";
+import Button from "../common/Button/button";
 export default function aboutcomponent() {
   return (
     <div>
@@ -79,6 +82,10 @@ export default function aboutcomponent() {
           <div className="w-auto h-1 bg-gradient-to-r from-[#1F1F1F] via-[#FFFF6D] to-[#1F1F1F] placeholder-opacity-950 mt-3"></div>
         </div>
       </div>
+      
+      <div>
+        <Globe />
+      </div>
       <div className="mx-[6vw] text-center lg:text-[1vw] md:text-[1.2vw] mb-10">
         Vikray boasts a global network of partners and collaborators who are
         dedicated to promoting sustainable fashion. From sourcing eco-friendly
@@ -88,8 +95,8 @@ export default function aboutcomponent() {
         forefront of sustainable fashion trends and innovations, making Vikray a
         leader in the industry.
       </div>
-      <div>
-        {/* <Globe/> */}
+      <div className="flex items-center justify-center mb-10">
+        <Button filled>Let&apos;s Connect</Button>
       </div>
     </div>
   );
