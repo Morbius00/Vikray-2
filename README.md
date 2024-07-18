@@ -1,3 +1,8 @@
+# Vikray: Revolutionizing Sustainable Fashion in the Metaverse
+
+Vikray is a cutting-edge metaverse shopping app seamlessly integrated with the web3 space. This innovative platform allows users to experience products through augmented reality (AR) and virtual reality (VR), bringing a new dimension to online shopping. Moreover, all items can be purchased as NFTs, ensuring a unique and secure transaction. Vikray is designed to be a compact, user-friendly platform offering the latest in branded sustainable fashion, catering to the needs and preferences of today's generation.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
