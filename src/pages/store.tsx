@@ -4,14 +4,14 @@ import React from "react";
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import Navbar from "@/components/common/navbar/navbar";
 import Footer from "@/components/common/footer/footer";
-import { TopPicksForYou } from "@/components/shop component";
-import  DealDay  from '@/components/shop component/DealOfTheDay';
+import { TopPicksForYou } from "@/components/shop_component";
+import  DealDay  from '@/components/shop_component/DealOfTheDay';
 
 import {
   ContainerScroll,
   Header,
   Card,
-} from "@/components/shop component/container-scroll-animation";
+} from "@/components/shop_component/container-scroll-animation";
 
 const Shop = () => {
   return (

@@ -5,7 +5,7 @@ import Navbar from "@/components/common/navbar/navbar";
 import React from "react";
 import Image from "next/image";
 import { AboutHero } from "@/assets/aboutAssets";
-import Aboutcomp from "@/components/About components/aboutcomponent"
+import Aboutcomp from "@/components/About_components/aboutcomponent"
 import Footer from "@/components/common/footer/footer";
 import Link from "next/link";
 

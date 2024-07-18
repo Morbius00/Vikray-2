@@ -1,6 +1,8 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import { ScrollModel } from "@/assets/shopassets";
+import Image from "next/image";
 
 export const ContainerScroll = ({
   titleComponent,
@@ -89,6 +91,19 @@ export const Card = ({
     >
       <div className=" h-full w-full  overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 ">
         {children}
+        <div className="flex flex-col items-center justify-center">
+          <div className="text-center">
+            <div className="lg:text-[50px] md:text-[32px] text-[5vw] mt-6 lg:mt-5 font-semibold "> Experience the Next-Gen </div>
+            <div className="lg:text-[40pxvw] md:text-[32px] text-[5vw] mt-6 lg:mt-5 font-semibold">
+              <span className="text-[#FFFF6D]"> Augmented Reality</span>
+               Shopping With <span className="text-[#FFFF6D]"> Vikray</span>
+            </div>
+            <div className="w-auto h-1 bg-gradient-to-r from-[#1F1F1F] via-[#FFFF6D] to-[#1F1F1F] placeholder-opacity-950 mt-3"></div>
+          </div>
+          <div className="md:w-[890px] w-[500px] md:-mt-6">
+            <Image src={ScrollModel} alt="scrollmodel"/>
+          </div>
+        </div>
       </div>
     </motion.div>
   );

@@ -10,6 +10,8 @@ import Bag from "./cambag.png";
 import Shoe from "./nikeshoe.png";
 import BagNikon from "./BagNikon.png";
 
+import ScrollModel from "./scrollmodel.png"
+
 export {
   Brand1,
   Brand2,
@@ -19,4 +21,5 @@ export {
   Bag,
   Shoe,
   BagNikon,
+  ScrollModel
 };

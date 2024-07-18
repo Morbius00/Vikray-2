@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { AboutHero2, AboutHero3 } from "@/assets/aboutAssets";
-import Globe from "@/components/GlobeComponent/globe";
+import Globe from "@/components/Globe_component/globe";
 import Button from "../common/Button/button";
 export default function aboutcomponent() {
   return (
