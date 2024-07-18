@@ -62,7 +62,7 @@ export const ThreeDCardDemo = ({
           <CardItem
             translateZ={20}
             as={Link}
-            href="https://twitter.com/mannupaaji"
+            href="/product"
             target="__blank"
             className="px-2 py-1 md:px-4 md:py-2 rounded-md text-sm  md:text-md border border-[#ffff6db1] font-normal dark:text-white"
           >
