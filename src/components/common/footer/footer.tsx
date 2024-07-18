@@ -27,12 +27,12 @@ const footer = () => {
           <div className="text-xl font-bold text-white pb-9 ml-7 mt-3">
             Excited for your new shopping journey?{" "}
           </div>
-          <Link href="/store">
-              <Button filled className="text-base">
-                {" "}
-                Lets Shop
-              </Button>
-            </Link>
+          <Link href="/store" className="ml-7">
+            <Button filled className="text-base">
+              {" "}
+              Lets Shop
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="text-center py-5 text-xl">Made By Morbius</div>

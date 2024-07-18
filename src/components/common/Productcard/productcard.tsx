@@ -59,15 +59,16 @@ export const ThreeDCardDemo = ({
           </CardItem>
         </div>
         <div className="flex md:flex-row flex-col md:gap-16 gap-3 justify-center items-center md:mt-8 mt-4 ">
+          <Link href="/product">
           <CardItem
             translateZ={20}
-            as={Link}
-            href="/product"
             target="__blank"
             className="px-2 py-1 md:px-4 md:py-2 rounded-md text-sm  md:text-md border border-[#ffff6db1] font-normal dark:text-white"
           >
             Try now 
           </CardItem>
+          </Link>
+          
           <CardItem
             translateZ={20}
             as="button"
