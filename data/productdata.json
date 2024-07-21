@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Rock Jacket",
+    "company": "CrypoRock",
+    "price": "$7250",
+    "size": ["S", "M", "L", "XL"],
+    "poster": "jacket.png",
+    "model": "rock_jacket",
+    "placement": "floor",
+    "hotspots": [
+      {
+        "id": 1,
+        "name": "Button closure",
+        "position": "0.07188187187656739m 1.4514574166323728m 0.08786709958031445m",
+        "normal": "-0.021876867398458802m 0.3620999834986919m 0.9318825058037508m"
+      },
+      {
+        "id": 2,
+        "name": "Leather material",
+        "position": "-0.14273273485683724m 1.193229129751948m 0.0749232170042912m",
+        "normal": "-0.6750052890684157m 0.165322875775553m 0.7190522974547578m"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Nike Air Pegasus",
+    "company": "Nike",
+    "price": "$890",
+    "size": [7, 8, 9, 10],
+    "poster": "shoe.png",
+    "model": "nike_air_zoom_pegasus_36",
+    "placement": "floor",
+    "hotspots": [
+      {
+        "id": 3,
+        "name": "lace Clouser",
+        "position": "0.07188187187656739m 1.4514574166323728m 0.08786709958031445m",
+        "normal": "-0.021876867398458802m 0.3620999834986919m 0.9318825058037508m"
+      },
+      {
+        "id": 4,
+        "name": "Canvas material",
+        "position": "-0.14273273485683724m 1.193229129751948m 0.0749232170042912m",
+        "normal": "-0.6750052890684157m 0.165322875775553m 0.7190522974547578m"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Nicon camera Bag",
+    "company": "Nikon",
+    "price": "$250",
+    "size": [7, 8, 9, 10],
+    "poster": "nickonbag.png",
+    "model": "old_camera_bag_",
+    "placement": "floor",
+    "hotspots": [
+      {
+        "id": 5,
+        "name": "Strap convex",
+        "position": "0.07188187187656739m 1.4514574166323728m 0.08786709958031445m",
+        "normal": "-0.021876867398458802m 0.3620999834986919m 0.9318825058037508m"
+      },
+      {
+        "id": 6,
+        "name": "Margin Canvas material",
+        "position": "-0.14273273485683724m 1.193229129751948m 0.0749232170042912m",
+        "normal": "-0.6750052890684157m 0.165322875775553m 0.7190522974547578m"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Versace Bag",
+    "company": "Martinize",
+    "price": "$1250",
+    "size": [7, 8, 9, 10],
+    "poster": "bag.png",
+    "model": "versace_bag",
+    "placement": "floor",
+    "hotspots": [
+      {
+        "id": 7,
+        "name": "Button closure",
+        "position": "0.07188187187656739m 1.4514574166323728m 0.08786709958031445m",
+        "normal": "-0.021876867398458802m 0.3620999834986919m 0.9318825058037508m"
+      },
+      {
+        "id": 8,
+        "name": "Leather material",
+        "position": "-0.14273273485683724m 1.193229129751948m 0.0749232170042912m",
+        "normal": "-0.6750052890684157m 0.165322875775553m 0.7190522974547578m"
+      }
+    ]
+  }
+]

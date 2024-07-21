@@ -5,42 +5,19 @@ import { rock_jacket } from "../../assets/3dassets/index"; // Import the 3D mode
 import Button from "../common/Button/button";
 import SizeChart from "../common/SizeChart/sizes";
 import { BagIcon, HeartIcon } from "@/assets/productAssets";
+import productData from "../../../data/productdata.json"; // Import the JSON data
 
 const ProductBody = () => {
-  const data = [
-    {
-      id: 1,
-      name: "Rock Jacket",
-      company: "CrypoRock",
-      price: "$1250",
-      poster: "",
-      model: rock_jacket,
-      placement: "floor",
-      hotspots: [
-        {
-          id: 1,
-          name: "Button closure",
-          position:
-            "0.07188187187656739m 1.4514574166323728m 0.08786709958031445m",
-          normal:
-            "-0.021876867398458802m 0.3620999834986919m 0.9318825058037508m",
-        },
-        {
-          id: 2,
-          name: "Leather material",
-          position:
-            "-0.14273273485683724m 1.193229129751948m 0.0749232170042912m",
-          normal: "-0.6750052890684157m 0.165322875775553m 0.7190522974547578m",
-        },
-      ],
-    },
-  ];
+  const data = productData.map((item) => ({
+    ...item,
+    model: rock_jacket // Attach the imported model to the respective item
+  }));
 
   return (
     <div>
       {/* Product details */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 md:my-16 my-10">
-        <div className=" flex flex-col items-start justify-start lg:items-center lg:justify-center lg:-mt-20  ml-10">
+        <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center lg:-mt-20 ml-10">
           <div className="text-5xl font-bold mb-8">{data[0].name}</div>
           <div className="lg:mb-24 mb-10">
             <div className="flex items-center gap-4 mb-8">
@@ -57,7 +34,7 @@ const ProductBody = () => {
             </div>
           </div>
 
-          <div className="flex space-x-6 ">
+          <div className="flex space-x-6">
             <Button className="bg-[#FFFF6D] flex items-center space-x-3 text-black px-8 py-2 rounded-xl">
               Buy Now
             </Button>
@@ -73,7 +50,7 @@ const ProductBody = () => {
             company={data[0].company}
             hotspots={data[0].hotspots.map((hotspot) => ({
               ...hotspot,
-              id: hotspot.id.toString(),
+              id: hotspot.id.toString()
             }))}
             price={data[0].price}
             poster={data[0].poster}
@@ -85,7 +62,6 @@ const ProductBody = () => {
           <div className="md:pt-[5rem] pt-10">
             <div className="flex items-center space-x-2 text-2xl">
               <div>Material & Care</div>
-
               <div className="border border-white h-0 w-[5vw]"></div>
             </div>
             <div>
@@ -98,7 +74,6 @@ const ProductBody = () => {
           <div className="lg:pt-[3rem] pt-5">
             <div className="flex items-center space-x-2 text-2xl">
               <div>Description</div>
-
               <div className="border border-white h-0 w-[5vw]"></div>
             </div>
             <div className="md:w-[30vw] w-[58vw]">
@@ -108,13 +83,9 @@ const ProductBody = () => {
           </div>
           <div className="lg:pt-[3rem] pt-5">
             <div className="mb-4">
-              <h2 className="sm:text-2xl text-xl font-bold">
-                Customer Reviews
-              </h2>
+              <h2 className="sm:text-2xl text-xl font-bold">Customer Reviews</h2>
               <div className="flex items-center">
-                <span className="text-yellow-500 sm:text-2xl text-xl mr-2">
-                  ★★★★★
-                </span>
+                <span className="text-yellow-500 sm:text-2xl text-xl mr-2">★★★★★</span>
                 <p className="text-gray-600">5 2345 reviews</p>
               </div>
             </div>
@@ -122,7 +93,7 @@ const ProductBody = () => {
           <div className="lg:pt-[3rem] pt-5">
             <h2 className="flex text-xl">
               Product by{" "}
-              <span className="text-[#FFFF6D] mx-1"> {data[0].company} </span>
+              <span className="text-[#FFFF6D] mx-1">{data[0].company}</span>
             </h2>
           </div>
         </div>
