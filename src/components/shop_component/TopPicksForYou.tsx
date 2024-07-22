@@ -1,9 +1,13 @@
 import React from "react";
+import { useRouter } from 'next/router';
 import Productcard from "../common/Productcard/productcard";
 import productData from "../../../data/productdata.json"; // Adjust the path as necessary
 import { Jack, Bag, BagNikon, Shoe } from "@/assets/shopassets";
+import { Product } from '@/types/type';
 
 const TopPicksForYou = () => {
+  const router = useRouter(); // Use Next.js router
+
   const imageMap: { [key: string]: any } = {
     "jacket.png": Jack,
     "nickonbag.png": BagNikon,
@@ -11,6 +15,14 @@ const TopPicksForYou = () => {
     "shoe.png": Shoe,
     // Add other images here if needed
   };
+
+  const handleTryNowClick = (product: Product) => {
+    router.push({
+      pathname: '/product',
+      query: { id: product.id }, // Pass the product ID as a query parameter
+    });
+  };
+
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex justify-center items-center mt-10">
@@ -23,17 +35,16 @@ const TopPicksForYou = () => {
 
       <div className="flex overflow-x-auto">
         <div className="container11 grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 gap-auto md:gap-6 my-12">
-          {productData.map((item) => {
-            return (
-              <Productcard
+          {productData.map((item) => (
+            <Productcard
               key={item.id}
-              name={item.name}
-              image={imageMap[item.poster]} // Use the mapped image
-              size={item.size.map(String)}
-              path={`/products/${item.model}`} // Adjust the path based on your routing
-              />
-            );
-          })}
+              product={{
+                ...item,
+                image: imageMap[item.poster],
+              }}
+              onTryNow={handleTryNowClick}
+            />
+          ))}
         </div>
       </div>
     </div>

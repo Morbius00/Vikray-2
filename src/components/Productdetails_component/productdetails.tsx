@@ -1,28 +1,49 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import ArModelViewerDynamic from "@/components/common/webxr/ArModelViewerDynamic";
-import { rock_jacket } from "../../assets/3dassets/index"; // Import the 3D model
+import {
+  rock_jacket,
+  nike_air_zoom_pegasus_36,
+  old_camera_bag_,
+  versace_bag,
+} from "../../assets/3dassets/index"; // Import the 3D model
 import Button from "../common/Button/button";
 import SizeChart from "../common/SizeChart/sizes";
-import { BagIcon, HeartIcon } from "@/assets/productAssets";
-import productData from "../../../data/productdata.json"; // Import the JSON data
+import { Product } from "@/types/type";
+import { Jack, Bag, BagNikon, Shoe } from "@/assets/shopassets";
+import { HeartIcon, BagIcon } from "@/assets/productAssets";
 
-const ProductBody = () => {
-  const data = productData.map((item) => ({
-    ...item,
-    model: rock_jacket // Attach the imported model to the respective item
-  }));
+interface ProductDetailsProps {
+  product: Product;
+  onClose: () => void;
+}
+
+const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
+  const modelMap: { [key: string]: any } = {
+    rock_jacket: rock_jacket,
+    nike_air_zoom_pegasus_36: nike_air_zoom_pegasus_36,
+    old_camera_bag_: old_camera_bag_,
+    versace_bag: versace_bag,
+  };
+  const imageMap: { [key: string]: any } = {
+    "jacket.png": Jack,
+    "nickonbag.png": BagNikon,
+    "bag.png": Bag,
+    "shoe.png": Shoe,
+    // Add other images here if needed
+  };
 
   return (
     <div>
       {/* Product details */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 md:my-16 my-10">
         <div className="flex flex-col items-start justify-start lg:items-center lg:justify-center lg:-mt-20 ml-10">
-          <div className="text-5xl font-bold mb-8">{data[0].name}</div>
+          <div className="text-5xl font-bold mb-8">{product.name}</div>
           <div className="lg:mb-24 mb-10">
             <div className="flex items-center gap-4 mb-8">
               <span className="text-3xl font-bold text-[#FFFF6D]">
-                {data[0].price}
+                {product.price}
               </span>
               <span className="text-white font-bold text-2xl line-through mr-2">
                 Rs2500
@@ -35,26 +56,26 @@ const ProductBody = () => {
           </div>
 
           <div className="flex space-x-6">
-            <Button className="bg-[#FFFF6D] flex items-center space-x-3 text-black px-8 py-2 rounded-xl">
-              Buy Now
+            <Button className="bg-[#FFFF6D] flex items-center space-x-3 text-black px-8 py-2 rounded-xl gap-2">
+            <Image src={BagIcon} alt="buy now icon"/>Buy Now
             </Button>
-            <Button className="bg-[] border border-[#FFFF6D] flex items-center space-x-3 text-white px-8 py-2 rounded-xl">
-              Wishlist
+            <Button className="bg-[] border border-[#FFFF6D] flex items-center space-x-3 text-white px-8 py-2 rounded-xl gap-2">
+             <Image src={HeartIcon} alt="heraticon"/> Wishlist
             </Button>
           </div>
         </div>
         <div className="items-center flex justify-center lg:mr-24 md:mr-40 mt-14">
           {/* AR Model Viewer */}
           <ArModelViewerDynamic
-            name={data[0].name}
-            company={data[0].company}
-            hotspots={data[0].hotspots.map((hotspot) => ({
+            name={product.name}
+            company={product.company}
+            hotspots={product.hotspots.map((hotspot) => ({
               ...hotspot,
-              id: hotspot.id.toString()
+              id: hotspot.id.toString(),
             }))}
-            price={data[0].price}
-            poster={data[0].poster}
-            model={data[0].model}
+            price={product.price}
+            poster={imageMap[product.poster]}
+            model={modelMap[product.model]}
           />
         </div>
         <div className="flex flex-col items-start justify-start ml-10 sm:ml-10 lg:-ml-5 md:-mt-[22rem] lg:mt-0">
@@ -83,9 +104,13 @@ const ProductBody = () => {
           </div>
           <div className="lg:pt-[3rem] pt-5">
             <div className="mb-4">
-              <h2 className="sm:text-2xl text-xl font-bold">Customer Reviews</h2>
+              <h2 className="sm:text-2xl text-xl font-bold">
+                Customer Reviews
+              </h2>
               <div className="flex items-center">
-                <span className="text-yellow-500 sm:text-2xl text-xl mr-2">★★★★★</span>
+                <span className="text-yellow-500 sm:text-2xl text-xl mr-2">
+                  ★★★★★
+                </span>
                 <p className="text-gray-600">5 2345 reviews</p>
               </div>
             </div>
@@ -93,7 +118,7 @@ const ProductBody = () => {
           <div className="lg:pt-[3rem] pt-5">
             <h2 className="flex text-xl">
               Product by{" "}
-              <span className="text-[#FFFF6D] mx-1">{data[0].company}</span>
+              <span className="text-[#FFFF6D] mx-1">{product.company}</span>
             </h2>
           </div>
         </div>
