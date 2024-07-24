@@ -15,7 +15,7 @@ import Button from "../common/Button/button";
 import SizeChart from "../common/SizeChart/sizes";
 import { Product } from "@/types/type";
 import { Jack, Bag, BagNikon, Shoe } from "@/assets/shopassets";
-import { HeartIcon, BagIcon } from "@/assets/productAssets";
+import { BagIcon } from "@/assets/productAssets";
 
 interface ProductDetailsProps {
   product: Product;
