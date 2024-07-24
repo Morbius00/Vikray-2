@@ -32,7 +32,7 @@ const ArModelViewer: React.FC<ArModelViewerProps> = ({
 }) => {
   return (
     <div id="card">
-      <div className="flex flex-col items-center justify-center bg-[#191919] w-[70vw] h-[35vh] lg:w-[25vw] lg:h-[50vh] md:w-[46vw] md:h-[50vh] sm:w-[60vw] sm:h-[50vh] rounded-3xl shadow-[-10px_-10px_30px_4px_rgba(135,135,76,1),_10px_10px_30px_4px_rgba(135,135,76,1)]">
+      <div className="flex flex-col items-center justify-center bg-[#191919] w-[70vw] h-[35vh] lg:w-[25vw] lg:h-[50vh] md:w-[46vw] md:h-[50vh] sm:w-[60vw] sm:h-[50vh] rounded-3xl shadow-[0px_0px_150px_1px_#75752D]">
         
         <model-viewer
           style={{ width: "100%", height: "60vh", display: "flex" }}

@@ -1,7 +1,8 @@
 // components/ProductBody.tsx
 "use client";
-import React from "react";
+import {useState} from "react";
 import { useRouter } from "next/router";
+import { useWishlist } from "../../../services/whishlistcontext";
 import Image from "next/image";
 import ArModelViewerDynamic from "@/components/common/webxr/ArModelViewerDynamic";
 import {
@@ -28,6 +29,18 @@ const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
     const params = new URLSearchParams();
     params.set("product", JSON.stringify(product));
     router.push(`/checkout?${params.toString()}`);
+  };
+
+  const [isWishlist, setIsWishlist] = useState(false);
+  const { addToWishlist, removeFromWishlist } = useWishlist();
+
+  const handleWishlistClick = () => {
+    if (isWishlist) {
+      removeFromWishlist(product);
+    } else {
+      addToWishlist(product);
+    }
+    setIsWishlist(!isWishlist);
   };
 
   const modelMap: { [key: string]: any } = {
@@ -72,8 +85,21 @@ const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
             >
               <Image src={BagIcon} alt="buy now icon" />Buy Now
             </Button>
-            <Button className="bg-[] border border-[#FFFF6D] flex items-center space-x-3 text-white px-8 py-2 rounded-xl gap-2">
-              <Image src={HeartIcon} alt="heraticon" /> Wishlist
+            <Button className="bg-[] border border-[#FFFF6D] flex items-center space-x-3 text-white px-8 py-2 rounded-xl gap-2" onClick={handleWishlistClick}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill={isWishlist ? "red" : "none"}
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
+                d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.672l1.318-1.354a4.5 4.5 0 116.364 6.364l-7.682 7.682a.75.75 0 01-1.06 0l-7.682-7.682a4.5 4.5 0 010-6.364z"
+              />
+            </svg> Wishlist
             </Button>
           </div>
         </div>
