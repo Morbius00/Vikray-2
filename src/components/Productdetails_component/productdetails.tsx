@@ -1,5 +1,7 @@
+// components/ProductBody.tsx
 "use client";
 import React from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import ArModelViewerDynamic from "@/components/common/webxr/ArModelViewerDynamic";
 import {
@@ -20,6 +22,14 @@ interface ProductDetailsProps {
 }
 
 const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
+  const router = useRouter();
+
+  const handleBuyNow = () => {
+    const params = new URLSearchParams();
+    params.set("product", JSON.stringify(product));
+    router.push(`/checkout?${params.toString()}`);
+  };
+
   const modelMap: { [key: string]: any } = {
     rock_jacket: rock_jacket,
     nike_air_zoom_pegasus_36: nike_air_zoom_pegasus_36,
@@ -56,11 +66,14 @@ const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
           </div>
 
           <div className="flex space-x-6">
-            <Button className="bg-[#FFFF6D] flex items-center space-x-3 text-black px-8 py-2 rounded-xl gap-2">
-            <Image src={BagIcon} alt="buy now icon"/>Buy Now
+            <Button
+              className="bg-[#FFFF6D] flex items-center space-x-3 text-black px-8 py-2 rounded-xl gap-2"
+              onClick={handleBuyNow}
+            >
+              <Image src={BagIcon} alt="buy now icon" />Buy Now
             </Button>
             <Button className="bg-[] border border-[#FFFF6D] flex items-center space-x-3 text-white px-8 py-2 rounded-xl gap-2">
-             <Image src={HeartIcon} alt="heraticon"/> Wishlist
+              <Image src={HeartIcon} alt="heraticon" /> Wishlist
             </Button>
           </div>
         </div>
