@@ -13,21 +13,21 @@ export const projects = [
     title: "Stripe",
     description:
       "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+    link: "/store",
     image: Product01.src,
   },
   {
     title: "Netflix",
     description:
       "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+    link: "/store",
     image: Product02.src, // Provide a default image value
   },
   {
     title: "Google",
     description:
       "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+    link: "/store",
     image: Product03.src, // Provide a default image value
   },
   {
@@ -41,14 +41,14 @@ export const projects = [
     title: "Amazon",
     description:
       "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
-    link: "https://amazon.com",
+    link: "/store",
     image: Product05.src, // Provide a default image value
   },
   {
     title: "Microsoft",
     description:
       "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-    link: "https://microsoft.com",
+    link: "/store",
     image: Product06.src, // Provide a default image value
   },
 ];
