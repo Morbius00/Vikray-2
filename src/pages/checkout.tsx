@@ -5,7 +5,16 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { BagIcon } from "@/assets/productAssets";
 import Button from "@/components/common/Button/button";
-import { Jack, Bag, BagNikon, Shoe } from "@/assets/shopassets";
+import {
+  Jack,
+  Bag,
+  BagNikon,
+  Shoe,
+  Headphone,
+  Jack2,
+  Watch,
+  AsisShoe,
+} from "@/assets/shopassets";
 import EmpthyHero from "@/assets/checkoutAssets/emptyHero2.png";
 
 const Checkout = () => {
@@ -51,6 +60,10 @@ const Checkout = () => {
     "nickonbag.png": BagNikon,
     "bag.png": Bag,
     "shoe.png": Shoe,
+    "headphones.png": Headphone,
+    "jacket2.png": Jack2,
+    "watch.png": Watch,
+    "asisshoe.png": AsisShoe,
   };
 
   const handleRemove = (id: string) => {
@@ -62,7 +75,10 @@ const Checkout = () => {
   };
 
   const renderProduct = (product: any) => (
-    <div key={product.id} className="flex lg:flex-row flex-col items-center justify-center my-10 gap-10 sm:mx-20 mx-10">
+    <div
+      key={product.id}
+      className="flex lg:flex-row flex-col items-center justify-center my-10 gap-10 sm:mx-20 mx-10 h-auto"
+    >
       <div className="bg-white-900 rounded-2xl bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-60 shadow-[0px_0px_150px_1px_#75752D]">
         <Image
           className="w-96 lg:pt-5 sm:w-[600px]"
@@ -71,15 +87,13 @@ const Checkout = () => {
         />
       </div>
       <div className="flex flex-col items-start gap-2  ">
-        <h2 className="sm:text-5xl text-4xl font-semibold">
-          {product.name}
-        </h2>
+        <h2 className="sm:text-5xl text-4xl font-semibold">{product.name}</h2>
         <div className="flex items-center space-x-2 sm:text-3xl text-2xl mt-5">
           <div>Details</div>
           <div className="border border-white h-0 w-[5vw]"></div>
         </div>
         <p className="text-gray-500 text-xl sm:w-[700px] w-80">
-          Black solid jacket, has a spread collar, 4 pockets, button closure, long sleeves, straight hem, and unlined lining
+          {product.description}
         </p>
         <div className="mb-4">
           <h2 className="sm:text-2xl text-xl font-bold mt-5">Add Wallet</h2>
@@ -110,13 +124,14 @@ const Checkout = () => {
             <span className="text-white font-bold text-2xl line-through mr-2">
               Rs2500
             </span>
-            <span className="text-[#92ff58] font-bold text-2xl">
-              50% off
-            </span>
+            <span className="text-[#92ff58] font-bold text-2xl">50% off</span>
           </div>
         </div>
         <div className="flex gap-4">
-          <Button className="bg-[#FFFF6D] flex items-center space-x-3 text-black px-8 py-2 rounded-xl gap-2" onClick={() => router.push("/confirmation")}>
+          <Button
+            className="bg-[#FFFF6D] flex items-center space-x-3 text-black px-8 py-2 rounded-xl gap-2"
+            onClick={() => router.push("/confirmation")}
+          >
             <Image src={BagIcon} alt="Checkout icon" /> Proceed to Payment
           </Button>
           <button
@@ -137,7 +152,9 @@ const Checkout = () => {
         <div className="flex justify-center items-center">
           <div className="text-white text-center font-medium text-4xl my-10">
             Your Items are ready to{" "}
-            <span className="text-[#FFFF6D] text-4xl font-medium mr-3">Checkout</span>
+            <span className="text-[#FFFF6D] text-4xl font-medium mr-3">
+              Checkout
+            </span>
             <div className="w-auto h-1 bg-gradient-to-r from-[#1F1F1F] via-[#FFFF6D] to-[#1F1F1F] placeholder-opacity-950 mt-3"></div>
           </div>
         </div>
@@ -149,9 +166,11 @@ const Checkout = () => {
         ) : (
           <div className="flex flex-col items-center justify-center h-full">
             <div>
-              <Image src={EmpthyHero} alt="Empthy Hero image"/>
+              <Image src={EmpthyHero} alt="Empthy Hero image" />
             </div>
-            <h2 className="text-3xl font-bold my-10">Oops Your cart is empty !</h2>
+            <h2 className="text-3xl font-bold my-10">
+              Oops Your cart is empty !
+            </h2>
             <Button
               className="bg-[#FFFF6D] text-black px-8 py-2 rounded-xl mb-5"
               onClick={() => router.push("/store")}

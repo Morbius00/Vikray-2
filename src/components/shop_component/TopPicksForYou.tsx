@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from 'next/router';
 import Productcard from "../common/Productcard/productcard";
 import productData from "../../../data/productdata.json"; // Adjust the path as necessary
-import { Jack, Bag, BagNikon, Shoe } from "@/assets/shopassets";
+import { Jack, Bag, BagNikon, Shoe, Headphone, Jack2, Watch, AsisShoe } from "@/assets/shopassets";
 import { Product } from '@/types/type';
 
 const TopPicksForYou = () => {
@@ -13,6 +13,10 @@ const TopPicksForYou = () => {
     "nickonbag.png": BagNikon,
     "bag.png": Bag,
     "shoe.png": Shoe,
+    "headphones.png": Headphone,
+    "jacket2.png": Jack2,
+    "watch.png": Watch,
+    "asisshoe.png": AsisShoe,
     // Add other images here if needed
   };
 

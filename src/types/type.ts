@@ -15,6 +15,8 @@ export interface Hotspot {
     size: (string | number)[];
     poster: string;
     model: string;
+    description: string;
+    material: string;
     placement: string;
     hotspots: Hotspot[];
     image:string;

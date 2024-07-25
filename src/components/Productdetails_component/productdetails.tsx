@@ -10,6 +10,10 @@ import {
   nike_air_zoom_pegasus_36,
   old_camera_bag_,
   versace_bag,
+  asics_shoe,
+  chronograph_watch_mudmaster,
+  headphones,
+  leather_jacket
 } from "../../assets/3dassets/index"; // Import the 3D model
 import Button from "../common/Button/button";
 import SizeChart from "../common/SizeChart/sizes";
@@ -48,7 +52,12 @@ const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
     nike_air_zoom_pegasus_36: nike_air_zoom_pegasus_36,
     old_camera_bag_: old_camera_bag_,
     versace_bag: versace_bag,
+    asics_shoe: asics_shoe,
+    chronograph_watch_mudmaster: chronograph_watch_mudmaster,
+    headphones: headphones,
+    leather_jacket: leather_jacket
   };
+  
   const imageMap: { [key: string]: any } = {
     "jacket.png": Jack,
     "nickonbag.png": BagNikon,
@@ -125,7 +134,7 @@ const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
               <div className="border border-white h-0 w-[5vw]"></div>
             </div>
             <div>
-              Material: Vegan Leather <br />
+              Material: {product.material} <br />
               Dry Wash
             </div>
           </div>
@@ -133,12 +142,11 @@ const ProductBody: React.FC<ProductDetailsProps> = ({ product, onClose }) => {
           {/* Description */}
           <div className="lg:pt-[3rem] pt-5">
             <div className="flex items-center space-x-2 text-2xl">
-              <div>Description</div>
+              <div>Details</div>
               <div className="border border-white h-0 w-[5vw]"></div>
             </div>
             <div className="md:w-[30vw] w-[58vw]">
-              Black solid jacket, has a spread collar, 4 pockets, button
-              closure, long sleeves, straight hem, and unlined lining
+             {product.description}
             </div>
           </div>
           <div className="lg:pt-[3rem] pt-5">

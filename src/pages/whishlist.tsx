@@ -12,6 +12,10 @@ import {
   nike_air_zoom_pegasus_36,
   old_camera_bag_,
   versace_bag,
+  asics_shoe,
+  chronograph_watch_mudmaster,
+  headphones,
+  leather_jacket
 } from "@/assets/3dassets"; // Import the 3D model
 import { Jack, Bag, BagNikon, Shoe } from "@/assets/shopassets";
 import EmpthyHero from "@/assets/checkoutAssets/emptyHero2.png";
@@ -25,6 +29,10 @@ const WishlistPage: React.FC = () => {
     nike_air_zoom_pegasus_36: nike_air_zoom_pegasus_36,
     old_camera_bag_: old_camera_bag_,
     versace_bag: versace_bag,
+    asics_shoe: asics_shoe,
+    chronograph_watch_mudmaster: chronograph_watch_mudmaster,
+    headphones: headphones,
+    leather_jacket: leather_jacket
   };
   const imageMap: { [key: string]: any } = {
     "jacket.png": Jack,
@@ -93,8 +101,7 @@ const WishlistPage: React.FC = () => {
                   <div className="border border-white h-0 w-[5vw]"></div>
                 </div>
                 <p className="text-gray-500 text-md sm:w-[650px] w-96">
-                  Black solid jacket, has a spread collar, 4 pockets, button
-                  closure, long sleeves, straight hem, and unlined lining
+                 {productData.description}
                 </p>
                 <div className="flex items-center gap-2 mt-5">
                   <div className="flex items-center gap-4 mb-8">
